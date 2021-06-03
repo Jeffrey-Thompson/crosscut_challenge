@@ -11,4 +11,6 @@ rl.on('line', function() {
     count++;
 });
 
-console.log(count);
+rl.on('close', function() {
+    console.log(`There are ${count} lines.`);
+});
